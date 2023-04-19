@@ -4,4 +4,8 @@ console.log('Content script works!');
 console.log('Must reload extension for modifications to take effect.');
 
 printLine("Using the 'printLine' at pages/Content/index.js");
-console.log('cccc___ccccc');
+
+if (window.location.href.endsWith('.json')) {
+  console.log(111)
+  window.location.href = 'https://realign.cn'
+}

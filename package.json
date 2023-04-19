@@ -8,8 +8,9 @@
     "url": "https://github.com/lxieyang/chrome-extension-boilerplate-react.git"
   },
   "scripts": {
+    "clean": "rm -rf build",
     "build": "node utils/build.js",
-    "start": "node utils/server.js",
+    "start": "npm run clean && node utils/server.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
   "dependencies": {
