@@ -14,7 +14,7 @@
   "icons": {
     "128": "icon-128.png"
   },
-  "content_scripts": [
+  "content_scripts_s": [
     {
       "matches": ["http://*/*", "https://*/*", "<all_urls>"],
       "js": ["contentScript.bundle.js"],
