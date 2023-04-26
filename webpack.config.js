@@ -7,6 +7,18 @@ const webpack = require('webpack'),
   TerserPlugin = require('terser-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const PageConfig = require('./src/pages/Newtab/pages.config');
+
+const ejsData = PageConfig.pages.reduce(
+  (prev, item, idx) => {
+    prev.pages += `<li class="${idx === 0 ? 'current' : ''}"><div class="cls-content"><div id="j-page-${item.id}" class="cls-page-item"></div></div></li>`;
+    prev.navs += `<a class="gooey-menu-item" style="width: 80px; height: 80px; color: white; background-color: rgb(104, 208, 153); line-height: 80px; transition-timing-function: cubic-bezier(0.8, 0.84, 0.44, 1.3); transform: translate3d(80px, 0, 0); transition-duration: 100ms;">${item.label}</a>`;
+
+    return prev;
+  },
+  { pages: '', navs: '' }
+);
+
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 const alias = {
@@ -148,13 +160,79 @@ let options = {
           to: path.join(__dirname, 'build'),
           force: true,
         },
+
+        /**
+         * css
+         */
+        {
+          from: 'src/assets/css/jqp_gooey.min.css',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/css/jqp_normalize.css',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/css/jqp_component.css',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/css/jqp_fxfullwidth.css',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/css/jqp_styles.css',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+
+        /**
+         * js
+         */
+        {
+          from: 'src/assets/js/jq-2.1.3.min.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/js/x_shortcuts.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/js/jqp_modernizr.custom.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/js/jqp_classie.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/js/jqp_gooey.min.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
+        {
+          from: 'src/assets/js/jqp_main.js',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
       ],
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'pages', 'Newtab', 'index.html'),
+      template: path.join(__dirname, 'src', 'pages', 'Newtab', 'index.ejs'),
       filename: 'newtab.html',
       chunks: ['newtab'],
       cache: false,
+
+      pages: ejsData.pages,
+      navs: ejsData.navs,
     }),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'pages', 'Options', 'index.html'),

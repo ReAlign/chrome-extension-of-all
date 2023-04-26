@@ -9,7 +9,7 @@
   },
   "scripts": {
     "clean": "rm -rf build",
-    "build": "node utils/build.js",
+    "build": "npm run clean && node utils/build.js",
     "start": "npm run clean && node utils/server.js",
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json,css,scss,md}'"
   },
@@ -19,7 +19,8 @@
     "axios": "^0.26.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hot-loader": "^4.13.0"
+    "react-hot-loader": "^4.13.0",
+    "react-json-view": "^1.21.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",

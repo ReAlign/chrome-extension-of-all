@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>All</title>
+</head>
+
+<body>
+  <!-- <div id="j-screen" class="cls-screen"></div> -->
+  <div id="j-component" class="cls-xxxxx component component-fullwidth">
+    <ul class="itemwrap">
+      <%= htmlWebpackPlugin.options.pages %>
+    </ul>
+  </div>
+
+  <nav id="gooey-h" class="navimenu" style="filter: url(&quot;#goo-shadow1&quot;);">
+    <input type="checkbox" class="menu-open" name="menu-open2" id="j-menu-open">
+    <label class="open-button" for="j-menu-open"
+      style="width: 80px; height: 80px; background-color: rgb(104, 208, 153); line-height: 80px;">
+      <span class="burger burger-1" style="font-size: 0.8em; width: 40px; height: 3px; left: 20px;"></span>
+      <span class="burger burger-2" style="font-size: 0.8em; width: 40px; height: 3px; left: 20px;"></span>
+      <span class="burger burger-3" style="font-size: 0.8em; width: 40px; height: 3px; left: 20px;"></span>
+    </label>
+    <%= htmlWebpackPlugin.options.navs %>
+    <svg id="gooeySVG1" class="gooeySVG">
+      <defs id="defs1">
+        <filter id="goo-shadow1" overflow="hidden">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo">
+          </feColorMatrix>
+          <feGaussianBlur in="goo" stdDeviation="2" result="shadow"></feGaussianBlur>
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0 0" result="shadow">
+          </feColorMatrix>
+          <feOffset in="shadow" dx="1" dy="1" result="shadow"></feOffset>
+          <feComposite in2="shadow" in="goo" result="goo"></feComposite>
+          <feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
+        </filter>
+        <filter id="goo1">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo">
+          </feColorMatrix>
+          <feComposite in2="goo" in="SourceGraphic" result="mix"></feComposite>
+        </filter>
+      </defs>
+    </svg>
+  </nav>
+
+  <div id="j-g-error" class="cls-g-error">!</div>
+</body>
+</html>

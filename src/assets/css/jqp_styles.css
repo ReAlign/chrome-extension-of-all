@@ -1,0 +1,53 @@
+html,
+body,
+.cls-xxxxx,
+.cls-page-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.cls-screen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  z-index: 1111111;
+}
+
+.cls-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  background-color: gray;
+}
+
+.navimenu {
+  position: fixed !important;
+  bottom: -60px;
+  left: 14px;
+  z-index: 11111;
+  display: none;
+}
+
+.cls-g-error {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  opacity: 0;
+
+  transition: opacity .3s;
+}
+
+.cls-g-error-show {
+  opacity: 1;
+}

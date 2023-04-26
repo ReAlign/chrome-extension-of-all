@@ -1,0 +1,26 @@
+.cls-json-view {
+  &-container {
+    //
+  }
+
+  &-inner {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    // padding: 16px;
+    // border-radius: 16px;
+    // background-color: rgba(111, 111, 111, .3);
+  }
+
+  &-pre {
+    height: calc(100% - 40px);
+    overflow: auto;
+
+    // pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+    .string { color: #98c379; }
+    .number { color: #d19a66; }
+    .boolean { color: #d19a66; }
+    .null { color: #d19a66; }
+    .key { color: #e06c75; }
+  }
+}

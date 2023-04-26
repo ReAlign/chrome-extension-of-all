@@ -1,0 +1,32 @@
+:root {
+  /* 	--main-bg-color: #fff;
+    --main-text-color: #888888; */
+  --main-bg-color: #1e1f26;
+  --main-text-color: #ccc;
+}
+
+/* [data-theme="dark"] {
+    --main-bg-color: #1e1f26;
+    --main-text-color: #ccc;
+  } */
+
+.cls-container {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  background-color: var(--main-bg-color);
+  position: relative;
+  transition: all ease 0.2s;
+}
+
+.cls-main-txt {
+  color: var(--main-text-color);
+}
+
+.cls-opacity-20 {
+  opacity: .2;
+}
