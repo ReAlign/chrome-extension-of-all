@@ -1,5 +1,6 @@
 html,
 body,
+.cls-root,
 .cls-xxxxx,
 .cls-page-item {
   position: relative;
@@ -8,12 +9,44 @@ body,
   overflow: hidden;
 }
 
+@keyframes root-trans {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.cls-root {
+  z-index: 1111111;
+  /* user-select: none;
+  pointer-events: none; */
+
+  animation-name: root-trans;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes screen-trans {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .cls-screen {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #333;
+  background-color: var(--main-bg-color);
   z-index: 1111111;
+  user-select: none;
+  pointer-events: none;
+
+  animation-name: screen-trans;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
 }
 
 .cls-content {
@@ -45,7 +78,7 @@ body,
   color: white;
   opacity: 0;
 
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 
 .cls-g-error-show {

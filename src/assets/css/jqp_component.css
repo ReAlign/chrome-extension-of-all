@@ -53,7 +53,7 @@
 	z-index: 1000;
 }
 
-.component li img {
+/* .component li img {
 	display: block;
 	max-width: 100%;
 }
@@ -65,4 +65,4 @@
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-}
+} */

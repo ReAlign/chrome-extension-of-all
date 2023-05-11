@@ -2,15 +2,16 @@ import React from 'react';
 import { render } from 'react-dom';
 import { injectCss, injectMultiScripts } from '../../utils/dom';
 
-import { Home, About, Clock, JsonView } from './pages';
+import './index.scss';
+
+import { Home, About, Main, JsonView } from './pages';
 
 import '@alifd/next/dist/next.css';
-import './index.scss';
 
 const CompMap = {
   home: <Home />,
   about: <About />,
-  clock: <Clock />,
+  main: <Main />,
   'json-view': <JsonView />,
 };
 const { cssSet, jsSet, pages } = require('./pages.config.js');

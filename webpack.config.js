@@ -160,6 +160,11 @@ let options = {
           to: path.join(__dirname, 'build'),
           force: true,
         },
+        {
+          from: 'src/assets/img/transparent_64x64.png',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
 
         /**
          * css

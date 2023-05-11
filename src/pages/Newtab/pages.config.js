@@ -15,19 +15,19 @@ module.exports = {
     'jqp_main.js',
   ],
   pages: [
+    // {
+    //   id: 'home',
+    //   label: 'H',
+    //   icon: '',
+    // },
     {
-      id: 'clock',
-      label: 'C',
+      id: 'main',
+      label: 'M',
       icon: '',
     },
     {
       id: 'json-view',
       label: 'JV',
-      icon: '',
-    },
-    {
-      id: 'home',
-      label: 'H',
       icon: '',
     },
     {

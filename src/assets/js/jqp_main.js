@@ -45,14 +45,14 @@
       }, 0);
     }, 0);
 
-    const Shift = 16;
+    const Control = 17;
     const Left = 37;
     const Up = 38;
     const Down = 40;
 
     const opt1 = {
       keys: {
-        Shift,
+        Control,
         Up,
       },
       isOrder: true,
@@ -62,7 +62,7 @@
     };
     const opt2 = {
       keys: {
-        Shift,
+        Control,
         Down,
       },
       isOrder: true,
@@ -72,7 +72,7 @@
     };
     const opt3 = {
       keys: {
-        Shift,
+        Control,
         Left,
       },
       isOrder: true,

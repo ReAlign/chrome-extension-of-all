@@ -1,0 +1,35 @@
+.cls-main {
+  &-container {
+    position: relative;
+    flex-direction: row;
+    align-content: space-around;
+  }
+
+  &-clock,
+  &-today {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-clock {
+    width: 40%;
+  }
+
+  &-today {
+    position: relative;
+    width: 60%;
+    justify-content: flex-start;
+    padding-left: 70px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: 90px;
+      background-color: var(--border-color);
+      transform: translateY(-50%);
+    }
+  }
+}
