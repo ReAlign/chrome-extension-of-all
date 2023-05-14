@@ -165,6 +165,11 @@ let options = {
           to: path.join(__dirname, 'build'),
           force: true,
         },
+        {
+          from: 'src/assets/img/favicon.png',
+          to: path.join(__dirname, 'build'),
+          force: true,
+        },
 
         /**
          * css

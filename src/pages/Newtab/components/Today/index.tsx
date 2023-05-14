@@ -6,6 +6,7 @@ import { getToday } from '../../../../utils/date';
 import './index.scss';
 
 interface DataItem {
+  type: 'shanBay' | 'ciba' | 'jinrishici'
   content: string;
   text: string;
   detailLink: string;
@@ -28,6 +29,7 @@ export const Today = () => {
 
     setData([
       {
+        type: 'shanBay',
         content: shanBay.content,
         text: shanBay.translation,
         detailIcon: 'https://ssl.gstatic.com/translate/favicon.ico',
@@ -36,6 +38,7 @@ export const Today = () => {
         )}&op=translate&hl=zh-CN`,
       },
       {
+        type: 'ciba',
         content: ciba.content,
         text: ciba.note,
         detailIcon: 'https://ssl.gstatic.com/translate/favicon.ico',
@@ -44,6 +47,7 @@ export const Today = () => {
         )}&op=translate&hl=zh-CN`,
       },
       {
+        type: 'jinrishici',
         content: jinrishici.content,
         text: `—— 《${jinrishici.origin.title}》${jinrishici.origin.dynasty}·${jinrishici.origin.author}`,
         detailIcon: 'https://so.gushiwen.cn/favicon.ico',
@@ -73,7 +77,7 @@ export const Today = () => {
           {data.map((x) => {
             return (
               <div key={x?.detailLink} className="cls-today-item">
-                <div className="cls-today-txt cls-today-origin">
+                <div className={`cls-today-txt cls-today-origin cls-today-origin_${x?.type}`}>
                   {x?.content}{' '}
                   {x?.detailLink && x?.detailIcon && (
                     <img
