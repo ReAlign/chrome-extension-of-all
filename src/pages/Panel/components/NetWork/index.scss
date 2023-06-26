@@ -1,0 +1,9 @@
+.tab-network-container {
+  padding: 6px;
+}
+
+.network_table_opts_cell {
+  & > button {
+    margin-right: 8px;
+  }
+}
