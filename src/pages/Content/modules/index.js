@@ -1,7 +1,7 @@
-const loginLiveAdmin = () => {
-  if (window.location.href === 'https://live-admin.fe.qa1fdg.net/') {
+const loginContentAdmin = () => {
+  if (window.location.href === 'https://content-admin.fe.qa1fdg.net/') {
     document.cookie =
-      'session=6hnZ9zqqHGCmenWLg1T6s1; expires=Fri, 31 Dec 2068 23:59:59 GMT; path=/';
+      'session=6hnZ9zqqHGCmenWLg1T6s1; expires=Fri, 31 Dec 2068 23:59:59 GMT; domain=content-admin.fe.qa1fdg.net';
     window.location.reload();
   }
 };
@@ -36,7 +36,7 @@ const redirectLocalhostHttps = () => {
 };
 
 export const runModules = () => {
-  loginLiveAdmin();
+  loginContentAdmin();
   removeBingAd();
   removeBaiduAd();
   redirectLocalhostHttps();
