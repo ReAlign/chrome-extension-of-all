@@ -1,0 +1,24 @@
+.cls-popup {
+  &-container {
+    width: 600px;
+    height: 400px;
+
+    // background-color: tomato;
+
+    .next-tabs {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .next-tabs-content {
+      position: relative;
+      height: calc(100% - 32px);
+    }
+
+    .next-tabs-tabpane {
+      position: relative;
+      height: 100% !important;
+    }
+  }
+}

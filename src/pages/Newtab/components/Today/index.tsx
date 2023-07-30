@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import { fGet } from '../../../../utils/fetch';
-import { getToday } from '../../../../utils/date';
+import { fGet } from '@/utils/fetch';
+import { getToday } from '@/utils/date';
 
 import './index.scss';
 

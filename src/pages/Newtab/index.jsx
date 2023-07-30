@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { injectCss, injectMultiScripts } from '../../utils/dom';
+import { injectCss, injectMultiScripts } from '@/utils/dom';
 
 import './index.scss';
 

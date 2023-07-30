@@ -1,0 +1,65 @@
+@keyframes ani-opacity-0-1-0 {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.cls-headers {
+  &-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // background-color: gray;
+    padding: 12px;
+    overflow-y: auto;
+
+    .next-row {
+      width: 100%;
+    }
+
+    .next-col {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .next-input {
+      width: 100% !important;
+    }
+  }
+
+  &-saved {
+    position: fixed;
+    bottom: 28px;
+    left: 14px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 20px #666;
+    opacity: 0;
+    pointer-events: none;
+
+    &.a-x-show {
+      animation: ani-opacity-0-1-0 3s ease-in-out forwards;
+    }
+  }
+
+  &-new-group-drawer {
+    .next-drawer-header {
+      display: none;
+    }
+  }
+
+  &-radiogroup {
+    position: relative;
+    width: 100%;
+  }
+}
