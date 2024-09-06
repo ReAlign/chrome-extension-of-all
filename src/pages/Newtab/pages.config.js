@@ -9,6 +9,14 @@ module.exports = {
   jsSet: [
     'jq-2.1.3.min.js',
     'x_shortcuts.js',
+    // 'jqp_modernizr.custom.js',
+    // 'jqp_classie.js',
+    // 'jqp_gooey.min.js',
+    // 'jqp_main.js',
+  ],
+  jsSet2: [
+    // 'jq-2.1.3.min.js',
+    // 'x_shortcuts.js',
     'jqp_modernizr.custom.js',
     'jqp_classie.js',
     'jqp_gooey.min.js',
@@ -25,14 +33,14 @@ module.exports = {
       label: 'M',
       icon: '',
     },
+    // {
+    //   id: 'json-view',
+    //   label: 'JV',
+    //   icon: '',
+    // },
     {
-      id: 'json-view',
-      label: 'JV',
-      icon: '',
-    },
-    {
-      id: 'about',
-      label: 'A',
+      id: 'one',
+      label: 'O',
       icon: '',
     },
   ],

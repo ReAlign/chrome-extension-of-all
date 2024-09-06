@@ -1,4 +1,4 @@
 export * from './home'
-export * from './about'
+export * from './one'
 export * from './main'
 export * from './json-view'

@@ -4,23 +4,27 @@ import { injectCss, injectMultiScripts } from '@/utils/dom';
 
 import './index.scss';
 
-import { Home, About, Main, JsonView } from './pages';
+import { Home, One, Main, JsonView } from './pages';
 
 import '@alifd/next/dist/next.css';
 
 const CompMap = {
   home: <Home />,
-  about: <About />,
+  one: <One />,
   main: <Main />,
   'json-view': <JsonView />,
 };
-const { cssSet, jsSet, pages } = require('./pages.config.js');
+const { cssSet, jsSet, jsSet2, pages } = require('./pages.config.js');
 
 cssSet.forEach((ca) => {
   injectCss(`./${ca}`);
 });
 
 injectMultiScripts(jsSet.map((j) => `./${j}`));
+
+setTimeout(() => {
+  injectMultiScripts(jsSet2.map((j) => `./${j}`));
+}, 1000)
 
 pages.forEach(({ id }) => {
   render(CompMap[id], window.document.querySelector(`#j-page-${id}`));

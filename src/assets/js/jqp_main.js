@@ -45,44 +45,45 @@
       }, 0);
     }, 0);
 
-    const Control = 17;
-    const Left = 37;
-    const Up = 38;
-    const Down = 40;
+    const Esc = 27;
+    // const F1 = 112;
+    // const Left = 37;
+    // const Up = 38;
+    // const Down = 40;
 
     const opt1 = {
       keys: {
-        Control,
-        Up,
+        Esc,
+        // Up,
       },
       isOrder: true,
       finishFn: () => {
         navigate('prev');
       },
     };
-    const opt2 = {
-      keys: {
-        Control,
-        Down,
-      },
-      isOrder: true,
-      finishFn: () => {
-        navigate('next');
-      },
-    };
-    const opt3 = {
-      keys: {
-        Control,
-        Left,
-      },
-      isOrder: true,
-      finishFn: () => {
-        document.getElementById('j-menu-open').click();
-      },
-    };
+    // const opt2 = {
+    //   keys: {
+    //     Control,
+    //     Down,
+    //   },
+    //   isOrder: true,
+    //   finishFn: () => {
+    //     navigate('next');
+    //   },
+    // };
+    // const opt3 = {
+    //   keys: {
+    //     F1,
+    //     // Left,
+    //   },
+    //   isOrder: true,
+    //   finishFn: () => {
+    //     document.getElementById('j-menu-open').click();
+    //   },
+    // };
 
     window.Shortcuts.init(opt1);
-    window.Shortcuts.init(opt2);
+    // window.Shortcuts.init(opt2);
     // window.Shortcuts.init(opt3);
   }
 

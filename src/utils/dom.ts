@@ -29,7 +29,7 @@ export const injectMultiScripts = (jsSrcArr: string[] = []) => {
         rs();
       })
       .catch((error) => {
-        console.log(error);
+        console.log('ddd: ', error);
         rj();
       });
   });
